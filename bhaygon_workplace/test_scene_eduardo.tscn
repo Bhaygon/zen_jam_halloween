@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://dodlvj4uhpptu"]
+
+[ext_resource type="PackedScene" uid="uid://csqyg8utnlrtm" path="res://bhaygon_workplace/player.tscn" id="1_45jwa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntnh"]
+size = Vector2(212, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3med"]
+size = Vector2(2282, 20)
+
+[node name="TestScene_Eduardo" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_45jwa")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(178, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_4ntnh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(0, 76)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_j3med")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-190, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("RectangleShape2D_4ntnh")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(467, -23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("RectangleShape2D_4ntnh")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(189, -72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+shape = SubResource("RectangleShape2D_4ntnh")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(-1097, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+shape = SubResource("RectangleShape2D_4ntnh")

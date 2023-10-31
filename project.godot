@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="zen_jam_game"
+run/main_scene="res://bhaygon_workplace/test_scene_eduardo.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
