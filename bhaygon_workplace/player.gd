@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 enum { IDLE, RUN, JUMP, HURT, DEAD }
 
+@onready var coyote_timer = $CoyoteTimer
+
 @export var gravity = 750
 @export var run_speed = 150
 @export var jump_speed = -300
@@ -39,7 +41,8 @@ func get_input():
         velocity.x -= run_speed
         $Sprite2D.flip_h = true
     # So pode pular enquanto no chao
-    if jump and is_on_floor():
+    if jump and (is_on_floor() or not coyote_timer.is_stopped()):
+        coyote_timer.stop()
         change_state(JUMP)
         velocity.y = jump_speed
     # Idle to Run
@@ -49,10 +52,11 @@ func get_input():
     if state == RUN and velocity.x == 0:
         change_state(IDLE)
     # to Jump
-    if state in [IDLE, RUN] and !is_on_floor():
+    if state in [IDLE, RUN] and (!is_on_floor()):
         change_state(JUMP)
 
 func _physics_process(delta):
+    var was_on_floor = is_on_floor()
     velocity.y += gravity * delta
     get_input()
     move_and_slide()
@@ -60,6 +64,8 @@ func _physics_process(delta):
         change_state(IDLE)
     if state == JUMP and velocity.y > 0:
         $AnimationPlayer.play("jump_down")
+    if was_on_floor and not is_on_floor() and state != JUMP:
+        coyote_timer.start()
 
 func reset(_position):
     position = _position
