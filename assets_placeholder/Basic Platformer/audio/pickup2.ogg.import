@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfsb0sdas0fpc"
+path="res://.godot/imported/pickup2.ogg-9d9285d6078c288930a5ccc05b48e405.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets_placeholder/Basic Platformer/audio/pickup2.ogg"
+dest_files=["res://.godot/imported/pickup2.ogg-9d9285d6078c288930a5ccc05b48e405.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

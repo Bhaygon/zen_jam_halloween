@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://csqyg8utnlrtm"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/player.gd" id="1_b12u8"]
-[ext_resource type="Texture2D" uid="uid://dgldjtd2d14ga" path="res://assets_placeholder/player_sheet.png" id="1_n0u1w"]
+[ext_resource type="Texture2D" uid="uid://dgldjtd2d14ga" path="res://assets_placeholder/Basic Platformer/player_sheet.png" id="2_4xnqe"]
 
 [sub_resource type="Animation" id="Animation_d8i6f"]
 length = 0.001
@@ -120,7 +120,7 @@ script = ExtResource("1_b12u8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -16)
-texture = ExtResource("1_n0u1w")
+texture = ExtResource("2_4xnqe")
 hframes = 19
 frame = 7
 

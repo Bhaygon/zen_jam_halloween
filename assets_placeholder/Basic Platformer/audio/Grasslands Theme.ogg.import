@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cjxtu1x7c4kpg"
+path="res://.godot/imported/Grasslands Theme.ogg-e73e1323b24f47fdabf6c2f650668ab5.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets_placeholder/Basic Platformer/audio/Grasslands Theme.ogg"
+dest_files=["res://.godot/imported/Grasslands Theme.ogg-e73e1323b24f47fdabf6c2f650668ab5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
