@@ -17,10 +17,8 @@ func player_on_screen():
 	var dist_x = $Player.global_position.x - $Camera2D.global_position.x
 	var dist_y = $Player.global_position.y - $Camera2D.global_position.y
 	if dist_x > (screensize.x / 2) / 2.5:
-		print("posx +") # Player muito adiantado
+		print("Player muito adiantado") # Player muito adiantado
 	elif dist_x < -(screensize.x / 2) / 2.5:
-		print("posx -") # Player fidando pra trás
+		print("Player ficando para trás") # Player fidando pra trás
 	if dist_y > (screensize.y / 2) / 2.5:
-		print("posy +") # Player caiu
-	elif dist_y < -(screensize.y / 2) / 2.5:
-		print("posy -") 
+		print("Player caiu") # Player caiu

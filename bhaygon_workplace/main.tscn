@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfutnncmrn35u"]
+[gd_scene load_steps=4 format=3 uid="uid://cfutnncmrn35u"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/main.gd" id="1_rndi5"]
 [ext_resource type="PackedScene" uid="uid://csqyg8utnlrtm" path="res://bhaygon_workplace/player.tscn" id="2_c7tcw"]
 [ext_resource type="PackedScene" uid="uid://ctvp8syc8pqon" path="res://bhaygon_workplace/levels/level_0.tscn" id="2_ek8vs"]
-[ext_resource type="PackedScene" uid="uid://cesa7o3s5h7lj" path="res://bhaygon_workplace/levels/level_base.tscn" id="4_nul4d"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_rndi5")
@@ -13,5 +12,3 @@ initial_room = ExtResource("2_ek8vs")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
-
-[node name="LevelBase" parent="." instance=ExtResource("4_nul4d")]
