@@ -45,7 +45,7 @@ func start_game():
 	var r = initial_room.instantiate()
 	r.global_position = $Camera2D.global_position
 	add_child(r)
-	$Player.reset($Camera2D.position)
+	$Player.reset(Vector2($Camera2D.position.x + 100, 0))
 	cam_speed = base_cam_speed
 	lose = false
 
