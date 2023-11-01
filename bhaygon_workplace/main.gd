@@ -10,7 +10,7 @@ func _ready():
 	add_child(r)
 
 func _process(delta):
-	$Camera2D.position.x += 50 * delta
+	$Camera2D.position.x += 100 * delta
 	player_on_screen()
 
 func player_on_screen():
