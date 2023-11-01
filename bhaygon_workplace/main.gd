@@ -16,9 +16,11 @@ func _process(delta):
 func player_on_screen():
 	var dist_x = $Player.global_position.x - $Camera2D.global_position.x
 	var dist_y = $Player.global_position.y - $Camera2D.global_position.y
-	if dist_x > (screensize.x / 2) / 2.5:
+	var x = (screensize.x / 2) / 2.5
+	if dist_x > x - 160:
+		$Camera2D.global_position.x += dist_x - x
 		print("Player muito adiantado") # Player muito adiantado
-	elif dist_x < -(screensize.x / 2) / 2.5:
+	elif dist_x < -x + 40:
 		print("Player ficando para trás") # Player fidando pra trás
 	if dist_y > (screensize.y / 2) / 2.5:
 		print("Player caiu") # Player caiu
