@@ -13,7 +13,7 @@ func _ready():
 	
 func _process(delta):
 	player_on_screen()
-	$Camera2D.position.x += cam_speed * delta
+	$CameraFollow.position.x += cam_speed * delta
 	if Input.is_action_just_pressed("dash"):
 		start_game()
 	
@@ -21,8 +21,8 @@ func player_on_screen():
 	if lose:
 		return
 	cam_speed = base_cam_speed
-	var dist_x = $Player.global_position.x - $Camera2D.global_position.x
-	var dist_y = $Player.global_position.y - $Camera2D.global_position.y
+	var dist_x = $Player.global_position.x - $CameraFollow.global_position.x
+	var dist_y = $Player.global_position.y - $CameraFollow.global_position.y
 	var x = (screensize.x / 2) / 2.5
 	if dist_x > x - 100:
 		cam_speed *= 2
@@ -43,9 +43,9 @@ func player_on_screen():
 func start_game():
 	get_tree().call_group("rooms", "queue_free")
 	var r = initial_room.instantiate()
-	r.global_position = $Camera2D.global_position
+	r.global_position = $CameraFollow.global_position
 	add_child(r)
-	$Player.reset(Vector2($Camera2D.position.x + 100, 0))
+	$Player.reset(Vector2($CameraFollow.position.x + 100, 0))
 	cam_speed = base_cam_speed
 	lose = false
 

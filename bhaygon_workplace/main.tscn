@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfutnncmrn35u"]
+[gd_scene load_steps=5 format=3 uid="uid://cfutnncmrn35u"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/main.gd" id="1_rndi5"]
 [ext_resource type="PackedScene" uid="uid://csqyg8utnlrtm" path="res://bhaygon_workplace/player.tscn" id="2_c7tcw"]
 [ext_resource type="PackedScene" uid="uid://ctvp8syc8pqon" path="res://bhaygon_workplace/levels/level_0.tscn" id="2_ek8vs"]
+[ext_resource type="PackedScene" uid="uid://dp33qw1g3p5e" path="res://bhaygon_workplace/camera_follow.tscn" id="4_cpfc6"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_rndi5")
@@ -10,6 +11,4 @@ initial_room = ExtResource("2_ek8vs")
 
 [node name="Player" parent="." instance=ExtResource("2_c7tcw")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
-position_smoothing_enabled = true
+[node name="CameraFollow" parent="." instance=ExtResource("4_cpfc6")]
