@@ -22,8 +22,8 @@ func set_life(value):
 	if life <= 0:
 		change_state(DEAD)
 
-func _ready():
-	change_state(IDLE)
+func lose():
+	change_state(DEAD)
 
 func change_state(new_state):
 	state = new_state
@@ -109,6 +109,7 @@ func hurt():
 		change_state(HURT)
 
 func reset(_position):
+	velocity = Vector2.ZERO
 	position = _position
 	life = 3
 	show()

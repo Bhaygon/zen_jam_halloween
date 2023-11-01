@@ -3,8 +3,9 @@ extends Node2D
 var used
 
 var next_rooms = [
-	"res://bhaygon_workplace/levels/level_base.tscn",
-	"res://bhaygon_workplace/levels/level_0.tscn"
+	"res://bhaygon_workplace/levels/level_0.tscn",
+	"res://bhaygon_workplace/levels/level_1.tscn",
+	"res://bhaygon_workplace/levels/level_2.tscn"
 ]
 
 func _ready():
@@ -14,7 +15,7 @@ func _ready():
 
 func _on_visible_on_screen_notifier_2d_screen_entered():
 	used = true
-	var room = load(next_rooms[1])
+	var room = load(next_rooms.pick_random())
 	var r = room.instantiate()
 	r.global_position.x = global_position.x + 512
 	get_parent().add_child(r)

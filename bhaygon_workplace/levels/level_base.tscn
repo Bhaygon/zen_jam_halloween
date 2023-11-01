@@ -495,6 +495,9 @@ texture = ExtResource("1_gko2n")
 15:21/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:21/0/physics_layer_0/angular_velocity = 0.0
 15:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:13/0 = 0
+16:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:13/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qlorb"]
 texture = ExtResource("2_n3pfo")
@@ -865,7 +868,7 @@ script = ExtResource("1_3hefo")
 texture_filter = 1
 tile_set = SubResource("TileSet_d7ap6")
 format = 2
-layer_0/tile_data = PackedInt32Array(65547, 196608, 1, 65546, 196608, 1, 65545, 196608, 1, 65544, 196608, 1, 65543, 196608, 1, 65542, 196608, 1, 65541, 196608, 1, 65540, 196608, 1, 65539, 196608, 1, 65538, 196608, 1, 65537, 196608, 1, 65536, 196608, 1, 131071, 196608, 1, 131070, 196608, 1, 131069, 196608, 1, 131068, 196608, 1, 131067, 196608, 1, 131066, 196608, 1, 131065, 196608, 1, 131064, 196608, 1, 131063, 196608, 1, 131062, 196608, 1, 131061, 196608, 1, 131060, 196608, 1, 131059, 196608, 1, 131058, 983040, 14, 65548, 196608, 1, 65549, 1245184, 14, 65551, 65536, 20, 131056, 65536, 20)
+layer_0/tile_data = PackedInt32Array(131058, 65536, 20, 65549, 65536, 20, 65551, 65536, 20, 131056, 65536, 20, 131060, 65536, 20, 131061, 65536, 20, 131062, 65536, 20, 65547, 65536, 20, 65546, 65536, 20, 65545, 65536, 20, 65544, 65536, 20, 131063, 65536, 20, 131065, 65536, 20, 131066, 65536, 20, 131067, 65536, 20, 131068, 65536, 20, 65542, 65536, 20, 65541, 65536, 20, 65540, 65536, 20, 65539, 65536, 20, 131070, 65536, 20, 131071, 65536, 20, 65536, 65536, 20, 65537, 65536, 20, 65543, 1114112, 14, 65538, 1114112, 14, 131069, 1114112, 14, 131064, 1114112, 14, 131059, 1114112, 14, 131057, 1114112, 14, 65548, 1114112, 14, 65550, 1114112, 14)
 
 [node name="Items" type="TileMap" parent="."]
 visible = false
@@ -877,7 +880,14 @@ texture_filter = 1
 format = 2
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(248, 0)
+position = Vector2(276, -4.76837e-07)
+scale = Vector2(2, 0.8)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-256, 0)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(256, 0)
 
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
