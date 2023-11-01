@@ -1,10 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cesa7o3s5h7lj"]
+[gd_scene load_steps=7 format=3 uid="uid://cesa7o3s5h7lj"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/levels/level_base.gd" id="1_3hefo"]
 [ext_resource type="Texture2D" uid="uid://btarqentp4k1" path="res://assets_placeholder/Basic Platformer/environment/tileset.png" id="1_gko2n"]
 [ext_resource type="Texture2D" uid="uid://cr86cdl0ks2u5" path="res://assets_placeholder/Basic Platformer/environment/props.png" id="2_n3pfo"]
-[ext_resource type="PackedScene" uid="uid://csqyg8utnlrtm" path="res://bhaygon_workplace/player.tscn" id="3_ebita"]
-[ext_resource type="TileSet" uid="uid://dn505hopwb4de" path="res://assets_placeholder/Basic Platformer/tilesets/tiles_items.tres" id="4_6g1sw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bsgdt"]
 texture = ExtResource("1_gko2n")
@@ -860,23 +858,18 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bsgdt")
 sources/1 = SubResource("TileSetAtlasSource_qlorb")
 
-[node name="LevelBase" type="Node2D"]
+[node name="LevelBase" type="Node2D" groups=["rooms"]]
 script = ExtResource("1_3hefo")
-
-[node name="Player" parent="." instance=ExtResource("3_ebita")]
-
-[node name="SpawnPoint" type="Marker2D" parent="."]
 
 [node name="World" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_d7ap6")
 format = 2
-layer_0/tile_data = PackedInt32Array(65547, 196608, 1, 65546, 196608, 1, 65545, 196608, 1, 65544, 196608, 1, 65543, 196608, 1, 65542, 196608, 1, 65541, 196608, 1, 65540, 196608, 1, 65539, 196608, 1, 65538, 196608, 1, 65537, 196608, 1, 65536, 196608, 1, 131071, 196608, 1, 131070, 196608, 1, 131069, 196608, 1, 131068, 196608, 1, 131067, 196608, 1, 131066, 196608, 1, 131065, 196608, 1, 131064, 196608, 1, 131063, 196608, 1, 131062, 196608, 1, 131061, 196608, 1, 131060, 196608, 1, 131059, 196608, 1, 131058, 983040, 14, 65548, 1245184, 14)
+layer_0/tile_data = PackedInt32Array(65547, 196608, 1, 65546, 196608, 1, 65545, 196608, 1, 65544, 196608, 1, 65543, 196608, 1, 65542, 196608, 1, 65541, 196608, 1, 65540, 196608, 1, 65539, 196608, 1, 65538, 196608, 1, 65537, 196608, 1, 65536, 196608, 1, 131071, 196608, 1, 131070, 196608, 1, 131069, 196608, 1, 131068, 196608, 1, 131067, 196608, 1, 131066, 196608, 1, 131065, 196608, 1, 131064, 196608, 1, 131063, 196608, 1, 131062, 196608, 1, 131061, 196608, 1, 131060, 196608, 1, 131059, 196608, 1, 131058, 983040, 14, 65548, 196608, 1, 65549, 1245184, 14)
 
 [node name="Items" type="TileMap" parent="."]
 visible = false
 texture_filter = 1
-tile_set = ExtResource("4_6g1sw")
 format = 2
 
 [node name="Danger" type="TileMap" parent="."]
