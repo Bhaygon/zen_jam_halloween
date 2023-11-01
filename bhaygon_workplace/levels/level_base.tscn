@@ -880,7 +880,11 @@ texture_filter = 1
 format = 2
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(276, -4.76837e-07)
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(2, 0.8)
+
+[node name="VisibleOnScreenNotifier2D2" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(448, -4.76837e-07)
 scale = Vector2(2, 0.8)
 
 [node name="Marker2D" type="Marker2D" parent="."]
@@ -890,4 +894,4 @@ position = Vector2(-256, 0)
 position = Vector2(256, 0)
 
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D2" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
