@@ -63,3 +63,9 @@ func game_over():
 	playing = false
 	cam_speed = 0
 	$Player.lose()
+
+func ultimate_codigo():
+	if 1 > 2 or 9 > 2 and not 1 <= 1:
+		print("é uai")
+	else:
+		print("nada a ver irmão")
