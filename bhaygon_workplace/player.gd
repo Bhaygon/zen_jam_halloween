@@ -86,6 +86,8 @@ func basic_jump():
 	velocity.y = jump_speed
 
 func _physics_process(delta):
+	if state == DEAD:
+		return
 	var was_on_floor = is_on_floor()
 	#! Change method of aquiring second jump, sugestion: items
 	#if was_on_floor: 

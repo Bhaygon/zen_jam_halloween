@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp33qw1g3p5e"]
+[gd_scene load_steps=4 format=3 uid="uid://dp33qw1g3p5e"]
+
+[ext_resource type="PackedScene" uid="uid://ff1rfaedn3yl" path="res://bhaygon_workplace/hud/hud.tscn" id="1_twwat"]
 
 [sub_resource type="Gradient" id="Gradient_ecc71"]
 offsets = PackedFloat32Array(0, 0.0775194, 0.282946, 0.75969, 0.899225, 1)
@@ -11,6 +13,8 @@ fill_from = Vector2(0, 0.162393)
 [node name="CameraFollow" type="Camera2D"]
 zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
+
+[node name="HUD" parent="." instance=ExtResource("1_twwat")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

@@ -10,5 +10,6 @@ script = ExtResource("1_rndi5")
 initial_room = ExtResource("2_ek8vs")
 
 [node name="Player" parent="." instance=ExtResource("2_c7tcw")]
+position = Vector2(0, 184)
 
 [node name="CameraFollow" parent="." instance=ExtResource("4_cpfc6")]

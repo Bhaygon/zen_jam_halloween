@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://ff1rfaedn3yl"]
+
+[ext_resource type="FontFile" uid="uid://c21e260ko4f3t" path="res://assets/MinimalPixel v2.ttf" id="1_1irlt"]
+
+[node name="HUD" type="MarginContainer"]
+z_index = 11
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("1_1irlt")
+text = "VAMPIRE RUNNER"
+fit_content = true
+autowrap_mode = 0
