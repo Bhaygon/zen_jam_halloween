@@ -23,15 +23,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
-z_index = -1
-layout_mode = 0
-offset_left = -288.0
-offset_top = -136.0
-offset_right = 208.0
-offset_bottom = 136.0
-color = Color(0, 0, 0.0588235, 1)
-
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
 offset_left = -288.0
