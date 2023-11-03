@@ -1,21 +1,5 @@
 extends Area2D
 
-<<<<<<< Updated upstream
-signal picked_up
-
-var textures = {
-    "cherry": "res://assets_placeholder/Basic Platformer/cherry_spawn.png", # Placeholder
-    "gem": "res://assets_placeholder/Basic Platformer/sprites/gem.png" # Placeholder
-}
-
-func init (type, _position):
-    $Sprite2D.texture = load(textures[type])
-    position = _position
-
-func _on_item_body_entered(_body):
-    picked_up.emit()
-    queue_free()    queue_free()    queue_free()    queue_free()
-=======
 var used = false
 
 func _ready():
@@ -35,4 +19,3 @@ func self_destruct():
         $PickupSound.play()
         await get_tree().create_timer(1).timeout
         queue_free()
->>>>>>> Stashed changes

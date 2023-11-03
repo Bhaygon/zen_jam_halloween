@@ -9,11 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bf4v3us7x20sq" path="res://assets/DarkForest1.2/bgrd_tree5.png" id="6_6c3yo"]
 [ext_resource type="AudioStream" uid="uid://cjxtu1x7c4kpg" path="res://assets_placeholder/Basic Platformer/audio/Grasslands Theme.ogg" id="8_5mgha"]
 [ext_resource type="Texture2D" uid="uid://bytlymjipb0dd" path="res://assets/DarkForest1.2/bgrd_tree3.png" id="8_impm7"]
-<<<<<<< Updated upstream
-=======
 [ext_resource type="AudioStream" uid="uid://j067nhwl08qk" path="res://assets/audio/Francisco-Rabelo-Go_-Go_-PumpKenny_-Gameplay-theme.ogg" id="9_ltovn"]
 [ext_resource type="AudioStream" uid="uid://mi0f14ffcplv" path="res://assets/audio/Morte-SFX2.ogg" id="10_0kv72"]
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://b0c0lvngmaq8m" path="res://assets/DarkForest1.2/bgrd_tree1.png" id="10_88m3x"]
 [ext_resource type="AudioStream" uid="uid://sa122di3mnc5" path="res://assets/audio/Play-SFX2.ogg" id="11_6b35r"]
 
