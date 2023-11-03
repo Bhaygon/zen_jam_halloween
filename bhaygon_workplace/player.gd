@@ -4,6 +4,7 @@ enum { IDLE, RUN, JUMP, HURT, DEAD, START }
 
 signal life_changed
 signal died
+signal score_gained
 
 @onready var coyote_timer = $CoyoteTimer
 @onready var jump_buffer_timer = $JumpBufferTimer
@@ -13,7 +14,7 @@ signal died
 @export var jump_speed = -300
 
 var state = DEAD
-var double_jump = 2 : set = set_double_jump
+var double_jump = 0 : set = set_double_jump
 
 # var life = 3: set = set_life
 
@@ -27,6 +28,7 @@ func lose():
 	change_state(DEAD)
 
 func add_double_jump():
+	score_gained.emit(200)
 	set_double_jump(double_jump + 1)
 
 func set_double_jump(value):
@@ -74,11 +76,7 @@ func get_input():
 		coyote_timer.stop()
 		basic_jump()
 	elif jump and not is_on_floor() and double_jump > 0: 
-		double_jump -= 1
-		$DoubleJumpSound.play()
-		jump_buffer_timer.stop()
-		change_state(JUMP)
-		velocity.y = jump_speed
+		use_double_jump()
 	#elif jump and is_on_wall():	
 	if state == IDLE and velocity.x != 0: # Idle to Run
 		change_state(RUN)
@@ -86,6 +84,14 @@ func get_input():
 		change_state(IDLE)
 	if state in [IDLE, RUN] and (!is_on_floor()): # to Jump
 		change_state(JUMP)
+
+func use_double_jump():
+	score_gained.emit(200)
+	double_jump -= 1
+	$DoubleJumpSound.play()
+	jump_buffer_timer.stop()
+	change_state(JUMP)
+	velocity.y = jump_speed
 
 func basic_jump():
 	$JumpSound.play()
@@ -117,7 +123,7 @@ func hurt():
 
 func reset(_position, time):
 	change_state(START)
-	set_double_jump(double_jump)
+	set_double_jump(0)
 	velocity = Vector2.ZERO
 	position = _position
 	# life = 3
