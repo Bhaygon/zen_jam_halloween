@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://dp33qw1g3p5e"]
+[gd_scene load_steps=4 format=3 uid="uid://dp33qw1g3p5e"]
 
-[ext_resource type="PackedScene" uid="uid://ff1rfaedn3yl" path="res://bhaygon_workplace/hud/hud.tscn" id="1_twwat"]
 [ext_resource type="Texture2D" uid="uid://bupobrqyl8q2a" path="res://assets/DarkForest1.2/main_background.png" id="2_ixor6"]
 
 [sub_resource type="Gradient" id="Gradient_ecc71"]
@@ -14,9 +13,6 @@ fill_from = Vector2(0, 0.162393)
 [node name="CameraFollow" type="Camera2D"]
 zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
-
-[node name="HUD" parent="." instance=ExtResource("1_twwat")]
-metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

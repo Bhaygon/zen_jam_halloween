@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://csqyg8utnlrtm"]
+[gd_scene load_steps=12 format=3 uid="uid://csqyg8utnlrtm"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/player.gd" id="1_b12u8"]
 [ext_resource type="Texture2D" uid="uid://h00rhsq07lru" path="res://assets/Complete_SpriteSheet.png" id="2_k63mr"]
+[ext_resource type="AudioStream" uid="uid://dawny7uxvmct5" path="res://assets_placeholder/Basic Platformer/audio/jump4.ogg" id="3_aqpt5"]
 
 [sub_resource type="Animation" id="Animation_d8i6f"]
 length = 0.001
@@ -141,3 +142,7 @@ one_shot = true
 [node name="JumpBufferTimer" type="Timer" parent="."]
 wait_time = 0.15
 one_shot = true
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_aqpt5")
+volume_db = -32.0

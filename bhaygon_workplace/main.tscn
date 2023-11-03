@@ -1,16 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfutnncmrn35u"]
+[gd_scene load_steps=10 format=3 uid="uid://cfutnncmrn35u"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/main.gd" id="1_rndi5"]
 [ext_resource type="PackedScene" uid="uid://csqyg8utnlrtm" path="res://bhaygon_workplace/player.tscn" id="2_c7tcw"]
 [ext_resource type="PackedScene" uid="uid://ctvp8syc8pqon" path="res://bhaygon_workplace/levels/level_0.tscn" id="2_ek8vs"]
+[ext_resource type="PackedScene" uid="uid://bapnkwhqqbjqc" path="res://bhaygon_workplace/hud/hud.tscn" id="3_xngc8"]
 [ext_resource type="PackedScene" uid="uid://dp33qw1g3p5e" path="res://bhaygon_workplace/camera_follow.tscn" id="4_cpfc6"]
 [ext_resource type="Texture2D" uid="uid://bf4v3us7x20sq" path="res://assets/DarkForest1.2/bgrd_tree5.png" id="6_6c3yo"]
+[ext_resource type="AudioStream" uid="uid://cjxtu1x7c4kpg" path="res://assets_placeholder/Basic Platformer/audio/Grasslands Theme.ogg" id="8_5mgha"]
 [ext_resource type="Texture2D" uid="uid://bytlymjipb0dd" path="res://assets/DarkForest1.2/bgrd_tree3.png" id="8_impm7"]
 [ext_resource type="Texture2D" uid="uid://b0c0lvngmaq8m" path="res://assets/DarkForest1.2/bgrd_tree1.png" id="10_88m3x"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_rndi5")
 initial_room = ExtResource("2_ek8vs")
+
+[node name="HUD" parent="." instance=ExtResource("3_xngc8")]
 
 [node name="Player" parent="." instance=ExtResource("2_c7tcw")]
 position = Vector2(0, 184)
@@ -50,3 +54,9 @@ position = Vector2(0, 12)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("10_88m3x")
 centered = false
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_5mgha")
+volume_db = -10.0
+
+[connection signal="start" from="HUD" to="." method="_on_hud_start"]

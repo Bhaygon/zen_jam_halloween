@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuufn4hp6ifp6"
-path="res://.godot/imported/back.png-a1e740c6a94cd1ca6442979630900b64.ctex"
+uid="uid://bvvgwe77bjfk5"
+path="res://.godot/imported/DoubleJumpIcon.png-e4cdc1ff9df4aa2d3396875053f51353.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_placeholder/Basic Platformer/environment/back.png"
-dest_files=["res://.godot/imported/back.png-a1e740c6a94cd1ca6442979630900b64.ctex"]
+source_file="res://assets/DoubleJumpIcon.png"
+dest_files=["res://.godot/imported/DoubleJumpIcon.png-e4cdc1ff9df4aa2d3396875053f51353.ctex"]
 
 [params]
 
