@@ -1,4 +1,5 @@
 [gd_scene load_steps=10 format=3 uid="uid://cfutnncmrn35u"]
+[gd_scene load_steps=12 format=3 uid="uid://cfutnncmrn35u"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/main.gd" id="1_rndi5"]
 [ext_resource type="PackedScene" uid="uid://csqyg8utnlrtm" path="res://bhaygon_workplace/player.tscn" id="2_c7tcw"]
@@ -8,7 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://bf4v3us7x20sq" path="res://assets/DarkForest1.2/bgrd_tree5.png" id="6_6c3yo"]
 [ext_resource type="AudioStream" uid="uid://cjxtu1x7c4kpg" path="res://assets_placeholder/Basic Platformer/audio/Grasslands Theme.ogg" id="8_5mgha"]
 [ext_resource type="Texture2D" uid="uid://bytlymjipb0dd" path="res://assets/DarkForest1.2/bgrd_tree3.png" id="8_impm7"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="AudioStream" uid="uid://j067nhwl08qk" path="res://assets/audio/Francisco-Rabelo-Go_-Go_-PumpKenny_-Gameplay-theme.ogg" id="9_ltovn"]
+[ext_resource type="AudioStream" uid="uid://mi0f14ffcplv" path="res://assets/audio/Morte-SFX2.ogg" id="10_0kv72"]
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://b0c0lvngmaq8m" path="res://assets/DarkForest1.2/bgrd_tree1.png" id="10_88m3x"]
+[ext_resource type="AudioStream" uid="uid://sa122di3mnc5" path="res://assets/audio/Play-SFX2.ogg" id="11_6b35r"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_rndi5")
@@ -59,4 +66,13 @@ centered = false
 stream = ExtResource("8_5mgha")
 volume_db = -10.0
 
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_0kv72")
+volume_db = -10.0
+
+[node name="PlaySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_6b35r")
+volume_db = -10.0
+
 [connection signal="start" from="HUD" to="." method="_on_hud_start"]
+[connection signal="item_pick" from="Player" to="." method="_on_player_item_pick"]

@@ -1,7 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://e1w2ew54qomn"]
+[gd_scene load_steps=8 format=3 uid="uid://e1w2ew54qomn"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/items/item.gd" id="1_kly8l"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://ct72kxj18umb2" path="res://assets_placeholder/Basic Platformer/sprites/cherry.png" id="2_40kgx"]
+=======
+[ext_resource type="Texture2D" uid="uid://bhe6vjn7g050i" path="res://assets/DoubleJumpAnimation.png" id="2_asiii"]
+[ext_resource type="AudioStream" uid="uid://dlwfkg6q06702" path="res://assets/audio/Salto-SFX2.ogg" id="3_eyd4b"]
+>>>>>>> Stashed changes
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_063dn"]
 radius = 19.0
@@ -62,3 +68,13 @@ autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_q186r")
 }
+<<<<<<< Updated upstream
+=======
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_eyd4b")
+volume_db = -10.0
+pitch_scale = 0.3
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+>>>>>>> Stashed changes

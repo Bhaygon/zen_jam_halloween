@@ -4,6 +4,7 @@ enum { IDLE, RUN, JUMP, HURT, DEAD, START }
 
 signal life_changed
 signal died
+signal item_pick
 
 @onready var coyote_timer = $CoyoteTimer
 @onready var jump_buffer_timer = $JumpBufferTimer
@@ -14,6 +15,7 @@ signal died
 
 var state = DEAD
 var double_jump = 2 : set = set_double_jump
+var double_jump = 0 : set = set_double_jump
 
 # var life = 3: set = set_life
 
@@ -26,6 +28,13 @@ var double_jump = 2 : set = set_double_jump
 func lose():
 	change_state(DEAD)
 
+<<<<<<< Updated upstream
+=======
+func add_double_jump():
+	item_pick.emit(250)
+	set_double_jump(double_jump + 1)
+
+>>>>>>> Stashed changes
 func set_double_jump(value):
 	double_jump = value
 	$"../HUD".update_jumps(double_jump)
@@ -72,7 +81,17 @@ func get_input():
 		basic_jump()
 	elif jump and not is_on_floor() and double_jump > 0: 
 		double_jump -= 1
+<<<<<<< Updated upstream
 		basic_jump()
+=======
+		$DoubleJumpParticles.restart()
+		$DoubleJumpParticles.emitting = true
+		$DoubleJumpSound.play()
+		item_pick.emit(250)
+		jump_buffer_timer.stop()
+		change_state(JUMP)
+		velocity.y = jump_speed
+>>>>>>> Stashed changes
 	#elif jump and is_on_wall():	
 	if state == IDLE and velocity.x != 0: # Idle to Run
 		change_state(RUN)
@@ -111,7 +130,7 @@ func hurt():
 
 func reset(_position, time):
 	change_state(START)
-	set_double_jump(double_jump)
+	set_double_jump(0)
 	velocity = Vector2.ZERO
 	position = _position
 	# life = 3

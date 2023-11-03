@@ -19,13 +19,13 @@ func _process(delta):
 		return
 	score += 100 * delta
 	$HUD.update_score(score)
-	multiplier = timer * 0.005
-	if timer > 80:
+	multiplier = timer * 0.007
+	if timer > 100:
 		multiplier = 0.4
 	else:
 		player_on_screen()
 		$CameraFollow.position.x += cam_speed * delta * (1 +multiplier) # print(multiplier)
-	
+
 func player_on_screen():
 	if not playing:
 		return
@@ -47,20 +47,23 @@ func player_on_screen():
 func start_game():
 	if playing:
 		return
+	$PlaySound.play()
 	get_tree().call_group("rooms", "queue_free")
 	var r = initial_room.instantiate()
 	r.global_position = $CameraFollow.global_position
 	add_child(r)
-	$Player.reset(Vector2($CameraFollow.position.x + 10, 0), 3)
+	var reset_time = 1.5
+	$Player.reset(Vector2($CameraFollow.position.x + 10, 0), reset_time)
 	timer = 0.0
 	score = 0
 	$HUD.hide_play()
 	$HUD.show_message(str(3))
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(reset_time / 3).timeout
 	$HUD.show_message(str(2))
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(reset_time / 3).timeout
 	$HUD.show_message(str(1))
 	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(reset_time / 3).timeout
 	$HUD.hide_message()
 	$Music.play()
 	cam_speed = base_cam_speed
@@ -69,11 +72,17 @@ func start_game():
 
 func game_over():
 	$Music.stop()
+	$GameOverSound.play()
 	playing = false
 	cam_speed = 0
 	$Player.lose()
 	await get_tree().create_timer(1).timeout
 	$HUD.new_game_screen("The sun is rising... Try again?");
+	$HUD.new_game_screen("Fate caught up with you... Try again?");
 
 func _on_hud_start():
 	start_game()
+
+
+func _on_player_item_pick(value: int):
+	score += value
