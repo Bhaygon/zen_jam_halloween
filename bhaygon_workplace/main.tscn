@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bapnkwhqqbjqc" path="res://bhaygon_workplace/hud/hud.tscn" id="3_xngc8"]
 [ext_resource type="PackedScene" uid="uid://dp33qw1g3p5e" path="res://bhaygon_workplace/camera_follow.tscn" id="4_cpfc6"]
 [ext_resource type="Texture2D" uid="uid://bf4v3us7x20sq" path="res://assets/DarkForest1.2/bgrd_tree5.png" id="6_6c3yo"]
-[ext_resource type="AudioStream" uid="uid://cjxtu1x7c4kpg" path="res://assets_placeholder/Basic Platformer/audio/Grasslands Theme.ogg" id="8_5mgha"]
 [ext_resource type="Texture2D" uid="uid://bytlymjipb0dd" path="res://assets/DarkForest1.2/bgrd_tree3.png" id="8_impm7"]
+[ext_resource type="AudioStream" uid="uid://j067nhwl08qk" path="res://assets/audio/Francisco-Rabelo-Go_-Go_-PumpKenny_-Gameplay-theme.ogg" id="9_ltovn"]
 [ext_resource type="Texture2D" uid="uid://b0c0lvngmaq8m" path="res://assets/DarkForest1.2/bgrd_tree1.png" id="10_88m3x"]
 
 [node name="Main" type="Node"]
@@ -56,7 +56,7 @@ texture = ExtResource("10_88m3x")
 centered = false
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_5mgha")
+stream = ExtResource("9_ltovn")
 volume_db = -10.0
 
 [connection signal="start" from="HUD" to="." method="_on_hud_start"]

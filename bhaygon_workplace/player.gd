@@ -26,6 +26,9 @@ var double_jump = 2 : set = set_double_jump
 func lose():
 	change_state(DEAD)
 
+func add_double_jump():
+	set_double_jump(double_jump + 1)
+
 func set_double_jump(value):
 	double_jump = value
 	$"../HUD".update_jumps(double_jump)
@@ -72,7 +75,10 @@ func get_input():
 		basic_jump()
 	elif jump and not is_on_floor() and double_jump > 0: 
 		double_jump -= 1
-		basic_jump()
+		$DoubleJumpSound.play()
+		jump_buffer_timer.stop()
+		change_state(JUMP)
+		velocity.y = jump_speed
 	#elif jump and is_on_wall():	
 	if state == IDLE and velocity.x != 0: # Idle to Run
 		change_state(RUN)

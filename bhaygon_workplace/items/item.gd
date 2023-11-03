@@ -1,16 +1,13 @@
 extends Area2D
 
-signal picked_up
+func _ready():
+        if randi() % 10 > 2: # 0 a 9
+                self_destruct()
 
-var textures = {
-    "cherry": "res://assets_placeholder/Basic Platformer/cherry_spawn.png", # Placeholder
-    "gem": "res://assets_placeholder/Basic Platformer/sprites/gem.png" # Placeholder
-}
+func _on_body_entered(body:Node2D):
+        if body.name == "Player":
+                body.add_double_jump()
+                self_destruct()
 
-func init (type, _position):
-    $Sprite2D.texture = load(textures[type])
-    position = _position
-
-func _on_item_body_entered(_body):
-    picked_up.emit()
-    queue_free()
+func self_destruct():
+        queue_free()

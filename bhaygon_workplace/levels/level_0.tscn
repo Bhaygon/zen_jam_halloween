@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctvp8syc8pqon"]
+[gd_scene load_steps=3 format=3 uid="uid://ctvp8syc8pqon"]
 
 [ext_resource type="PackedScene" uid="uid://cesa7o3s5h7lj" path="res://bhaygon_workplace/levels/level_base.tscn" id="1_po0wp"]
+[ext_resource type="PackedScene" uid="uid://e1w2ew54qomn" path="res://bhaygon_workplace/items/item.tscn" id="2_hfsno"]
 
 [node name="Level_0" instance=ExtResource("1_po0wp")]
 
@@ -9,3 +10,9 @@ layer_0/tile_data = PackedInt32Array(65543, 1441794, 15, 65542, 1376258, 15, 655
 
 [node name="VisibleOnScreenNotifier2D" parent="." index="3"]
 position = Vector2(288, 0)
+
+[node name="Item" parent="." index="7" instance=ExtResource("2_hfsno")]
+position = Vector2(232, -95)
+
+[node name="Item2" parent="." index="8" instance=ExtResource("2_hfsno")]
+position = Vector2(-41, 99)

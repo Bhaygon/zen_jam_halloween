@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://bhaygon_workplace/player.gd" id="1_b12u8"]
 [ext_resource type="Texture2D" uid="uid://h00rhsq07lru" path="res://assets/Complete_SpriteSheet.png" id="2_k63mr"]
-[ext_resource type="AudioStream" uid="uid://dawny7uxvmct5" path="res://assets_placeholder/Basic Platformer/audio/jump4.ogg" id="3_aqpt5"]
+[ext_resource type="AudioStream" uid="uid://dlwfkg6q06702" path="res://assets/audio/Salto-SFX2.ogg" id="3_mc0sq"]
 
 [sub_resource type="Animation" id="Animation_d8i6f"]
 length = 0.001
@@ -144,5 +144,10 @@ wait_time = 0.15
 one_shot = true
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_aqpt5")
-volume_db = -32.0
+stream = ExtResource("3_mc0sq")
+volume_db = -10.0
+
+[node name="DoubleJumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mc0sq")
+volume_db = -10.0
+pitch_scale = 2.0
