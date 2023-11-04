@@ -86,6 +86,8 @@ func get_input():
 		change_state(JUMP)
 
 func use_double_jump():
+	$DoubleJumpParticles.restart()
+	$DoubleJumpParticles.emitting = true
 	score_gained.emit(200)
 	double_jump -= 1
 	$DoubleJumpSound.play()
