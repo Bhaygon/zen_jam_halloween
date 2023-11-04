@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://e1w2ew54qomn"]
+[gd_scene load_steps=10 format=3 uid="uid://e1w2ew54qomn"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/items/item.gd" id="1_kly8l"]
 [ext_resource type="Texture2D" path="res://assets/DoubleJumpAnimation.png" id="2_asiii"]
@@ -48,6 +48,14 @@ _data = {
 "idle": SubResource("Animation_aae6y")
 }
 
+[sub_resource type="Curve" id="Curve_4beq7"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.473684), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_xybdu"]
+offsets = PackedFloat32Array(0.271654, 0.543307, 0.791339, 1)
+colors = PackedColorArray(1, 1, 0, 1, 0, 0.803922, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
 [node name="Item" type="Area2D"]
 collision_layer = 8
 collision_mask = 2
@@ -69,5 +77,20 @@ libraries = {
 [node name="PickupSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_74kbo")
 pitch_scale = 0.3
+
+[node name="PickupParticles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 60
+lifetime = 0.2
+one_shot = true
+emission_shape = 1
+emission_sphere_radius = 17.22
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 68.12
+initial_velocity_max = 121.45
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_4beq7")
+color_ramp = SubResource("Gradient_xybdu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

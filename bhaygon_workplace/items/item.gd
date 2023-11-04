@@ -12,5 +12,6 @@ func _on_body_entered(body:Node2D):
 func self_destruct():
         $Sprite2D.set_deferred("visible", false)
         $PickupSound.play()
+        $PickupParticles.emitting = true
         await get_tree().create_timer(1).timeout
         queue_free()
