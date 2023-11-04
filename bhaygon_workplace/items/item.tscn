@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://bhaygon_workplace/items/item.gd" id="1_kly8l"]
 [ext_resource type="Texture2D" uid="uid://bhe6vjn7g050i" path="res://assets/DoubleJumpAnimation.png" id="2_asiii"]
-[ext_resource type="AudioStream" uid="uid://dlwfkg6q06702" path="res://assets/audio/Salto-SFX2.ogg" id="3_74kbo"]
+[ext_resource type="AudioStream" uid="uid://d3xejxt6d6qae" path="res://assets/audio/Power-Up-SFX.ogg" id="3_0eww2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_063dn"]
 radius = 12.0
@@ -64,6 +64,7 @@ script = ExtResource("1_kly8l")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_asiii")
 hframes = 5
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_063dn")
@@ -75,8 +76,7 @@ libraries = {
 }
 
 [node name="PickupSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_74kbo")
-pitch_scale = 0.3
+stream = ExtResource("3_0eww2")
 
 [node name="PickupParticles" type="CPUParticles2D" parent="."]
 emitting = false
