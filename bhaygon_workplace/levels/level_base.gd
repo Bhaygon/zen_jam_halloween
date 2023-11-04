@@ -5,7 +5,14 @@ var used
 var next_rooms = [
 	"res://bhaygon_workplace/levels/level_0.tscn",
 	"res://bhaygon_workplace/levels/level_1.tscn",
-	"res://bhaygon_workplace/levels/level_2.tscn"
+	"res://bhaygon_workplace/levels/level_2.tscn",
+	"res://bhaygon_workplace/levels/level_3.tscn",
+	"res://bhaygon_workplace/levels/level_4.tscn",
+	"res://bhaygon_workplace/levels/level_5.tscn",
+	"res://bhaygon_workplace/levels/level_6.tscn",
+	"res://bhaygon_workplace/levels/level_7.tscn",
+	"res://bhaygon_workplace/levels/level_8.tscn",
+	"res://bhaygon_workplace/levels/level_9.tscn",
 ]
 
 func _ready():

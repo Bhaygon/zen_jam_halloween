@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7d0p6321pcrv"]
+
+[ext_resource type="PackedScene" uid="uid://cesa7o3s5h7lj" path="res://bhaygon_workplace/levels/level_base.tscn" id="1_s0xsy"]
+[ext_resource type="PackedScene" uid="uid://e1w2ew54qomn" path="res://bhaygon_workplace/items/item.tscn" id="2_qv2qk"]
+
+[node name="LevelBase" instance=ExtResource("1_s0xsy")]
+
+[node name="World" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(131058, 1441794, 15, 65549, 65538, 15, 65551, 196610, 15, 131056, 1310722, 15, 131057, 1376258, 15, 65550, 131074, 15, 65520, 1310722, 14, 65521, 1376258, 14, 65522, 1441794, 14, 13, 65538, 14, 14, 131074, 14, 15, 196610, 14, 65527, 65538, 14, 131063, 65538, 15, 65528, 131074, 14, 131064, 131074, 15, 65529, 196610, 14, 131065, 196610, 15, 65530, 1310722, 14, 131066, 1310722, 15, 65531, 1376258, 14, 131067, 1376258, 15, 65532, 1441794, 14, 131068, 1441794, 15, 196619, 655363, 6, 458741, 720899, 6, 458746, 655363, 6, 458751, 655363, 6, 393220, 655363, 6, 327689, 655363, 6, 458742, 786435, 6, -65533, 131074, 14, 3, 131074, 15, -65532, 196610, 14, 4, 196610, 15, -65531, 1310722, 14, 5, 1310722, 15, -65530, 1376258, 14, 6, 1376258, 15, -65529, 1441794, 14, 7, 1441794, 15, -65534, 65538, 14, 2, 65538, 15)
+
+[node name="Item" parent="." index="7" instance=ExtResource("2_qv2qk")]
+position = Vector2(-160, 80)
+
+[node name="Item2" parent="." index="8" instance=ExtResource("2_qv2qk")]
+position = Vector2(72, 80)
