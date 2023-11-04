@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://bhaygon_workplace/player.gd" id="1_b12u8"]
 [ext_resource type="Texture2D" uid="uid://h00rhsq07lru" path="res://assets/Complete_SpriteSheet.png" id="2_k63mr"]
-[ext_resource type="AudioStream" path="res://assets/audio/Salto-SFX2.ogg" id="3_mc0sq"]
+[ext_resource type="AudioStream" uid="uid://dlwfkg6q06702" path="res://assets/audio/Salto-SFX2.ogg" id="3_mc0sq"]
 
 [sub_resource type="Animation" id="Animation_d8i6f"]
 length = 0.001

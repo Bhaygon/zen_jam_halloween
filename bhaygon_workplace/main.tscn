@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cfutnncmrn35u"]
+[gd_scene load_steps=18 format=3 uid="uid://cfutnncmrn35u"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/main.gd" id="1_rndi5"]
 [ext_resource type="PackedScene" uid="uid://csqyg8utnlrtm" path="res://bhaygon_workplace/player.tscn" id="2_c7tcw"]
@@ -7,10 +7,131 @@
 [ext_resource type="PackedScene" uid="uid://dp33qw1g3p5e" path="res://bhaygon_workplace/camera_follow.tscn" id="4_cpfc6"]
 [ext_resource type="Texture2D" uid="uid://bf4v3us7x20sq" path="res://assets/DarkForest1.2/bgrd_tree5.png" id="6_6c3yo"]
 [ext_resource type="Texture2D" uid="uid://bytlymjipb0dd" path="res://assets/DarkForest1.2/bgrd_tree3.png" id="8_impm7"]
-[ext_resource type="AudioStream" path="res://assets/audio/Francisco-Rabelo-Go_-Go_-PumpKenny_-Gameplay-theme.ogg" id="9_ltovn"]
-[ext_resource type="AudioStream" path="res://assets/audio/Morte-SFX2.ogg" id="10_8a453"]
+[ext_resource type="AudioStream" uid="uid://j067nhwl08qk" path="res://assets/audio/Francisco-Rabelo-Go_-Go_-PumpKenny_-Gameplay-theme.ogg" id="9_ltovn"]
+[ext_resource type="Texture2D" uid="uid://b8e31coa72tcj" path="res://assets/Sprites.png-removebg.png" id="9_lx8v4"]
+[ext_resource type="AudioStream" uid="uid://mi0f14ffcplv" path="res://assets/audio/Morte-SFX2.ogg" id="10_8a453"]
 [ext_resource type="Texture2D" uid="uid://b0c0lvngmaq8m" path="res://assets/DarkForest1.2/bgrd_tree1.png" id="10_88m3x"]
-[ext_resource type="AudioStream" path="res://assets/audio/Play-SFX2.ogg" id="11_4dhpk"]
+[ext_resource type="AudioStream" uid="uid://sa122di3mnc5" path="res://assets/audio/Play-SFX2.ogg" id="11_4dhpk"]
+
+[sub_resource type="Animation" id="Animation_xfjh7"]
+resource_name = "villager1"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -100)]
+}
+
+[sub_resource type="Animation" id="Animation_mygr4"]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sqpw8"]
+resource_name = "villager2"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-50, 0), Vector2(-33.333, -50), Vector2(50, -25), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vt3oo"]
+resource_name = "villager3"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(20, 60), Vector2(0, 100), Vector2(-20, 40)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kq53l"]
+_data = {
+"RESET": SubResource("Animation_mygr4"),
+"villager1": SubResource("Animation_xfjh7"),
+"villager2": SubResource("Animation_sqpw8"),
+"villager3": SubResource("Animation_vt3oo")
+}
 
 [node name="Main" type="Node"]
 script = ExtResource("1_rndi5")
@@ -56,6 +177,530 @@ position = Vector2(0, 12)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("10_88m3x")
 centered = false
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-248, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer"]
+autoplay = "villager1"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-272, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer2"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer2"]
+autoplay = "villager2"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-280, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer3"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer3"]
+autoplay = "villager1"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-288, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer4"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer4"]
+autoplay = "villager2"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-320, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer5"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer5"]
+autoplay = "villager1"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-336, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer6"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer6"]
+autoplay = "villager2"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-336, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer7"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer7"]
+autoplay = "villager1"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-368, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer8"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer8"]
+autoplay = "villager2"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-368, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer9"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer9"]
+autoplay = "villager1"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-400, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer10"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer10"]
+autoplay = "villager2"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-400, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer11"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer11"]
+autoplay = "villager1"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer12" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-416, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer12"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer12"]
+autoplay = "villager2"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer13" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-432, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer13"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer13"]
+autoplay = "villager1"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer14" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-448, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer14"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer14"]
+autoplay = "villager2"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer15" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-432, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer15"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer15"]
+autoplay = "villager1"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayer16" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-504, 120)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer16"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 4
+region_enabled = true
+region_rect = Rect2(0, 261, 1007, 244)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer16"]
+autoplay = "villager2"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-264, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF2" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-280, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF2"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF2"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF3" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-288, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF3"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF3"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF4" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-312, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF4"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF4"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF5" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-336, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF5"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF5"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF6" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-344, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF6"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF6"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF7" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-360, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF7"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF7"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF8" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-368, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF8"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF8"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF9" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-392, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF9"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF9"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF10" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-400, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF10"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF10"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF11" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-416, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF11"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF11"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF12" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-440, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF12"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF12"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
+
+[node name="ParallaxLayerF13" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-456, 116.13)
+motion_mirroring = Vector2(250, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayerF13"]
+position = Vector2(248, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_lx8v4")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(1, -1, 489, 263)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF13"]
+autoplay = "villager3"
+libraries = {
+"": SubResource("AnimationLibrary_kq53l")
+}
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_ltovn")

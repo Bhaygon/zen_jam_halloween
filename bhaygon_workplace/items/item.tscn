@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://e1w2ew54qomn"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/items/item.gd" id="1_kly8l"]
-[ext_resource type="Texture2D" path="res://assets/DoubleJumpAnimation.png" id="2_asiii"]
-[ext_resource type="AudioStream" path="res://assets/audio/Salto-SFX2.ogg" id="3_74kbo"]
+[ext_resource type="Texture2D" uid="uid://bhe6vjn7g050i" path="res://assets/DoubleJumpAnimation.png" id="2_asiii"]
+[ext_resource type="AudioStream" uid="uid://dlwfkg6q06702" path="res://assets/audio/Salto-SFX2.ogg" id="3_74kbo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_063dn"]
 radius = 12.0
