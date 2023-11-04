@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cfutnncmrn35u"]
+[gd_scene load_steps=19 format=3 uid="uid://cfutnncmrn35u"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/main.gd" id="1_rndi5"]
 [ext_resource type="PackedScene" uid="uid://csqyg8utnlrtm" path="res://bhaygon_workplace/player.tscn" id="2_c7tcw"]
@@ -125,12 +125,41 @@ tracks/1/keys = {
 "values": [Vector2(0, 0), Vector2(20, 60), Vector2(0, 100), Vector2(-20, 40)]
 }
 
+[sub_resource type="Animation" id="Animation_056xw"]
+resource_name = "villager4"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-20, 40), Vector2(0, 100), Vector2(20, 60), Vector2(0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kq53l"]
 _data = {
 "RESET": SubResource("Animation_mygr4"),
 "villager1": SubResource("Animation_xfjh7"),
 "villager2": SubResource("Animation_sqpw8"),
-"villager3": SubResource("Animation_vt3oo")
+"villager3": SubResource("Animation_vt3oo"),
+"villager4": SubResource("Animation_056xw")
 }
 
 [node name="Main" type="Node"]
@@ -499,7 +528,7 @@ region_enabled = true
 region_rect = Rect2(1, -1, 489, 263)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF2"]
-autoplay = "villager3"
+autoplay = "villager4"
 libraries = {
 "": SubResource("AnimationLibrary_kq53l")
 }
@@ -535,7 +564,7 @@ region_enabled = true
 region_rect = Rect2(1, -1, 489, 263)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF4"]
-autoplay = "villager3"
+autoplay = "villager4"
 libraries = {
 "": SubResource("AnimationLibrary_kq53l")
 }
@@ -571,7 +600,7 @@ region_enabled = true
 region_rect = Rect2(1, -1, 489, 263)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF6"]
-autoplay = "villager3"
+autoplay = "villager4"
 libraries = {
 "": SubResource("AnimationLibrary_kq53l")
 }
@@ -607,7 +636,7 @@ region_enabled = true
 region_rect = Rect2(1, -1, 489, 263)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF8"]
-autoplay = "villager3"
+autoplay = "villager4"
 libraries = {
 "": SubResource("AnimationLibrary_kq53l")
 }
@@ -661,7 +690,7 @@ region_enabled = true
 region_rect = Rect2(1, -1, 489, 263)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF11"]
-autoplay = "villager3"
+autoplay = "villager4"
 libraries = {
 "": SubResource("AnimationLibrary_kq53l")
 }
@@ -697,7 +726,7 @@ region_enabled = true
 region_rect = Rect2(1, -1, 489, 263)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayerF13"]
-autoplay = "villager3"
+autoplay = "villager4"
 libraries = {
 "": SubResource("AnimationLibrary_kq53l")
 }
