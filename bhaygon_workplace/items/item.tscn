@@ -64,7 +64,6 @@ script = ExtResource("1_kly8l")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_asiii")
 hframes = 5
-frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_063dn")

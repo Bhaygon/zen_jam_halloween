@@ -11,6 +11,8 @@ var next_rooms = [
 	"res://bhaygon_workplace/levels/level_5.tscn",
 	"res://bhaygon_workplace/levels/level_6.tscn",
 	"res://bhaygon_workplace/levels/level_7.tscn",
+	"res://bhaygon_workplace/levels/level_7.tscn", # Chance aumentada
+	"res://bhaygon_workplace/levels/level_7.tscn", # Chance aumentada
 	"res://bhaygon_workplace/levels/level_8.tscn",
 	"res://bhaygon_workplace/levels/level_9.tscn",
 ]

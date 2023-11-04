@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cfutnncmrn35u"]
+[gd_scene load_steps=20 format=3 uid="uid://cfutnncmrn35u"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/main.gd" id="1_rndi5"]
 [ext_resource type="PackedScene" uid="uid://csqyg8utnlrtm" path="res://bhaygon_workplace/player.tscn" id="2_c7tcw"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://mi0f14ffcplv" path="res://assets/audio/Morte-SFX2.ogg" id="10_8a453"]
 [ext_resource type="Texture2D" uid="uid://b0c0lvngmaq8m" path="res://assets/DarkForest1.2/bgrd_tree1.png" id="10_88m3x"]
 [ext_resource type="AudioStream" uid="uid://sa122di3mnc5" path="res://assets/audio/Play-SFX2.ogg" id="11_4dhpk"]
+[ext_resource type="AudioStream" uid="uid://ykmux4o0wg4p" path="res://assets/audio/Francisco-Rabelo-PumpKenny-Main-Screen-theme.ogg" id="13_pbbw4"]
 
 [sub_resource type="Animation" id="Animation_mygr4"]
 length = 2.0
@@ -741,6 +742,10 @@ volume_db = -10.0
 
 [node name="PlaySound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_4dhpk")
+volume_db = -10.0
+
+[node name="StartMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_pbbw4")
 volume_db = -10.0
 
 [connection signal="start" from="HUD" to="." method="_on_hud_start"]

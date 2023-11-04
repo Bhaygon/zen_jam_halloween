@@ -12,6 +12,7 @@ var score: int = 0
 
 func _ready():
 	screensize = get_viewport().size
+	$StartMusic.play()
 	
 func _process(delta):
 	timer += 1 * delta
@@ -21,10 +22,9 @@ func _process(delta):
 	$HUD.update_score(score)
 	multiplier = timer * 0.005
 	if timer > 80:
-		multiplier = 0.4
-	else:
-		player_on_screen()
-		$CameraFollow.position.x += cam_speed * delta * (1 +multiplier) # print(multiplier)
+		multiplier = 0.5
+	player_on_screen()
+	$CameraFollow.position.x += cam_speed * delta * (1 +multiplier) # print(multiplier)
 	
 func player_on_screen():
 	if not playing:
@@ -47,6 +47,7 @@ func player_on_screen():
 func start_game():
 	if playing:
 		return
+	$StartMusic.stop()
 	$PlaySound.play()
 	get_tree().call_group("rooms", "queue_free")
 	var r = initial_room.instantiate()
@@ -80,7 +81,6 @@ func game_over():
 
 func _on_hud_start():
 	start_game()
-
 
 func _on_player_score_gained(value: int):
 	score += value
