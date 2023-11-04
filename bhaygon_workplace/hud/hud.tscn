@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bapnkwhqqbjqc"]
+[gd_scene load_steps=11 format=3 uid="uid://bapnkwhqqbjqc"]
 
 [ext_resource type="Script" path="res://bhaygon_workplace/hud/hud.gd" id="1_0din3"]
 [ext_resource type="FontFile" uid="uid://c21e260ko4f3t" path="res://assets/MinimalPixel v2.ttf" id="1_1irlt"]
 [ext_resource type="Texture2D" uid="uid://bvvgwe77bjfk5" path="res://assets/DoubleJumpIcon.png" id="1_bjmhq"]
 [ext_resource type="Texture2D" uid="uid://7hxu3ly5pbiy" path="res://assets/GUI.png" id="2_7xsqh"]
+[ext_resource type="Texture2D" uid="uid://bus3x4743drdi" path="res://assets/PicsArt_11-04-08.27.14.jpg" id="5_qassp"]
+[ext_resource type="Texture2D" uid="uid://b8e31coa72tcj" path="res://assets/Sprites.png-removebg.png" id="6_3doit"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a4gcs"]
 atlas = ExtResource("2_7xsqh")
@@ -11,10 +13,10 @@ region = Rect2(50, 34, 44, 12)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8y14t"]
 texture = SubResource("AtlasTexture_a4gcs")
-expand_margin_left = 20.0
-expand_margin_top = 10.0
-expand_margin_right = 20.0
-expand_margin_bottom = 10.0
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j18l4"]
 atlas = ExtResource("2_7xsqh")
@@ -22,10 +24,10 @@ region = Rect2(50, 34, 44, 12)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jd3pu"]
 texture = SubResource("AtlasTexture_j18l4")
-expand_margin_left = 20.0
-expand_margin_top = 10.0
-expand_margin_right = 20.0
-expand_margin_bottom = 10.0
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_0din3")
@@ -116,4 +118,140 @@ texture = ExtResource("1_bjmhq")
 expand_mode = 3
 stretch_mode = 5
 
+[node name="CreditsButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -62.5
+offset_top = -80.0
+offset_right = 62.5
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_1irlt")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxTexture_8y14t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jd3pu")
+text = "CREDITS"
+
+[node name="CreditsScreen" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="CreditsScreen"]
+offset_right = 1024.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CreditsScreen/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_qassp")
+expand_mode = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="CreditsScreen/MarginContainer"]
+position = Vector2(272, 496)
+texture = ExtResource("6_3doit")
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 260)
+
+[node name="Sprite2D2" type="Sprite2D" parent="CreditsScreen/MarginContainer"]
+position = Vector2(768, 504)
+texture = ExtResource("6_3doit")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(744, 251, 243, 254)
+
+[node name="GridContainer" type="GridContainer" parent="CreditsScreen/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 2
+
+[node name="Label" type="Label" parent="CreditsScreen/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_1irlt")
+theme_override_font_sizes/font_size = 30
+text = "Game Designer:
+Iago (Raptorey)"
+
+[node name="Label2" type="Label" parent="CreditsScreen/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_1irlt")
+theme_override_font_sizes/font_size = 30
+text = "Music and SFX:
+Francisco (Raebel Musix)"
+
+[node name="Label3" type="Label" parent="CreditsScreen/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_1irlt")
+theme_override_font_sizes/font_size = 30
+text = "Programmer:
+Eduardo (Bhaygon)"
+
+[node name="Label4" type="Label" parent="CreditsScreen/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_1irlt")
+theme_override_font_sizes/font_size = 30
+text = "Art:
+The Shadow (tsd0233)"
+
+[node name="Label" type="Label" parent="CreditsScreen"]
+offset_left = 405.0
+offset_top = 80.0
+offset_right = 618.0
+offset_bottom = 143.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_1irlt")
+theme_override_font_sizes/font_size = 60
+text = "Credits"
+
+[node name="BackCreditsButton" type="Button" parent="CreditsScreen"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -62.5
+offset_top = -80.0
+offset_right = 62.5
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_1irlt")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxTexture_8y14t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jd3pu")
+text = "RETURN"
+
 [connection signal="pressed" from="StartContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CreditsScreen/BackCreditsButton" to="." method="_on_back_credits_button_pressed"]
