@@ -68,7 +68,7 @@ dash={
 
 [physics]
 
-common/physics_ticks_per_second=360
+common/physics_ticks_per_second=180
 
 [rendering]
 
